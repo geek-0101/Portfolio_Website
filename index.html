@@ -4,12 +4,17 @@
     <head>
         <meta charset = "UTF-8">
         <title>Portfolio | Kit</title>
+        <!--FAVICON-->
+        <link rel="icon" type="image/png" href="img/favicon.png">
     </head>
+
     <body>
 
         <!--HERO SECTION-->
         <header>
-            <img src = "Kit_Face.jpg" alt = "Pic of Kit" width = "550">
+            <!--FACE-->
+            <img src = "img/Kit_Face.jpg" alt = "Pic of Kit" width = "550">
+            
             
             <!--NAV BAR-->
             <nav>
@@ -18,11 +23,12 @@
             </nav>
             
             <h1>Kit's Portfolio</h1>
-            <p>Hi! I'm Kit, an undergrad student in Bangalore. You can learn a bit about me here.            </p>
+            <p>Hi! I'm Kit, an undergrad student. You can learn a bit about me here.            </p>
         </header>
 
         <br>
 
+        <!--EDUCATION-->
         <section id = "Education">
             <h2>Education</h2>
             <ul>
@@ -47,20 +53,51 @@
         
         <br>
 
+        <!--CONTACT-->
         <section id = "contact">
-            <h2>Contact Me</h2>
+            <h2>Drop a message</h2>
+            <form action="/submit" method="POST">
+                
+                <!--NAME FIELD-->
+                <input type="text" id="name" for="name" placeholder="Enter your name here" required>
+                <br>
 
-            <a href = "https://www.linkedin.com/in/pauline-j-127b60350" target = "_blank">
-                <img alt = "LinkedIn icon" height = "50" src = "linkedin.png">
-            </a>
+                <!--TECH STACK CHECKBOX-->
+                <p>Tech stack</p>
+                <input type="checkbox" id="python" name="tech" value="python">
+                <label for="python">Python</label>
+                <input type="checkbox" id="fwebdev" name="tech" value="fwebdev">
+                <label for="fwebdev">Frontend-WebDev</label>
+                <input type="checkbox" id="bwebdev" name="tech" value="bwebdev">
+                <label for="bwebdev">Backend-WebDev</label>
+                <input type="checkbox" id="c" name="tech" value="c">
+                <label for="c">C</label>
+                
+                <br><br>                
+                <!--MESSAGE-->
+                <textarea id="message" name="message" rows="8" cols="50" maxlength="350" placeholder="Type your message here" required></textarea>
 
-            <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=25etcs0002214@msruas.ac.in" target = "_blank" rel = "noopener noreferrer">
-                <img alt = "Email icon" src = "email.jpg" height = "52">
-            </a>
+                <br>
+                <!--FORM SUBMIT/RESET-->
+                <button type="reset"><img alt="reset form button" src="img/clear.svg" height="30"></button>
+                <button type="submit"><img alt="send message button" src="img/send.jpg" height="30"></button>
+            </form>
         </section>
         
         <br>
-        <footer>&copy; Developed by Kit</footer>
+
+        <footer>
+            &copy; 2026 Developed by Kit.
+            
+            <a href = "https://www.linkedin.com/in/pauline-j-127b60350" target = "_blank">
+                <img alt = "link to LinkedIn" height = "15" src = "img/linkedin.png">
+            </a>
+
+            <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=25etcs0002214@msruas.ac.in" target = "_blank" rel = "noopener noreferrer">
+                <img alt = "link to Email" src = "img/email.jpg" height = "15">
+            </a>
+
+        </footer>
 
     </body>
 </html>
