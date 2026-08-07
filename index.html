@@ -1,68 +1,132 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset = "UTF-8">
-        <title>Portfolio | Kit</title>
-        <!--FAVICON-->
-        <link rel="icon" type="image/png" href="img/favicon.png">
-    </head>
+<head>
+    <!-- META TAGS -->
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Kit</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Frontend  web dev. Open to collaborations">
+    <meta name="keywords" content="pauline, portfolio, frontend, html, css, javascript, freelance developer">
+    <meta name="author" content="Pauline">
+    <!-- Open Graph Meta Tags for Social Media Viewing -->
+    <meta property="og:title" content="PJ's Portfolio">
+    <meta property="og:description" content="Frontend web dev. Open to collaborations.">
+    <meta property="og:image" content="img/preview.jpg">
+    <meta property="og:type" content="website"> 
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PJ's Portfolio">
+    <meta name="twitter:description" content="Frontend web dev. Open to collaborations.">
+    <meta name="twitter:image" content="img/preview.jpg">
+    <!-- Links -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <body>
 
-        <!--HERO SECTION-->
-        <header>
-            <!--FACE-->
-            <img src = "img/Kit_Face.jpg" alt = "Pic of Kit" width = "550">
-            
-            
-            <!--NAV BAR-->
-            <nav>
-                <a href = #skillset>Tech Skills</a>
-                <a href = #contact>Contact Me</a>
-            </nav>
-            
-            <h1>Kit's Portfolio</h1>
-            <p>Hi! I'm Kit, an undergrad student. You can learn a bit about me here.            </p>
-        </header>
+<body>
 
-        <br>
-
-        <!--EDUCATION-->
-        <section id = "Education">
-            <h2>Education</h2>
-            <ul>
-                <li>Ramaiah University of Applied Sciences - BTech, CSE</li>
-                <p>2025-29</p>
+    <!-- HEADER + NAVIGATION -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">PJ</div>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
+            <!-- FOR DARK MODE -->
+            <button 
+            class="theme-toggle" 
+            aria-label="Toggle theme" 
+            title="Toggle Theme">
+            </button>
+            <!--Mobile Menu -->
+                <button
+                    class="menu-toggle"
+                    aria-label="Navigate"
+                    aria-expanded="False">
+                </button>
+        </nav>
+    </header>
+    <main>
+
+        <!-- HERO SECTION -->
+         <section class="hero-section">
+            <h1>I am <span class=highlight>Pauline Joseph</span></h1>
+            <p class="tagline">WebDev | Tech Enthusiast</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View my projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+         </section>
+        
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <figure class="profile-figure">
+                    <img src="img/profile.jpg" alt="Pic of Pauline" width="300">
+                </figure>
+                <div class="about-text">
+                    <p>An enthusiastic techie</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item" data-level="90">HTML5</div>
+                <div class="skill-item" data-level="80">CSS3</div>
+                <div class="skill-item" data-level="75">JavaScript</div>
+                <div class="skill-item" data-level="65">React</div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="project-filters">
+                <!-- The data-filter attribute is what JS will read -->
+                <button class="filter-btn active" data-filter="all">All</button> 
+                <button class="filter-btn active" data-filter="web">Web</button>
+                <button class="filter-btn active" data-filter="design">Design</button>
+            </div>
+
+                <h3>Project 1</h3>
+                <p>A simple portfolio webpage using HTML, CSS and Javscript</p>
+                <a href="project1.html" class="button">View project</a><br>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube-nocookie.com/embed/AtuzapfqF1M" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
 
         <br>
 
-        <!--SKILLSET-->
-        <section id = "skillset">
-            <h2>Technical Skillset</h2>
-            <ul>
-                <li>Python</li>
-                <li>C</li>
-                <li>HTML</li>
-                <li>MySQL</li>
-            </ul>
-        </section>
-        
-        
-        <br>
-
-        <!--CONTACT-->
+        <!-- CONTACT SECTION -->
         <section id = "contact">
-            <h2>Drop a message</h2>
+            <h2>Drop a message | Collab</h2>
             <form action="/submit" method="POST">
                 
-                <!--NAME FIELD-->
-                <input type="text" id="name" for="name" placeholder="Enter your name here" required>
+                <!-- Name Field -->
+                <label for="name">Enter name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name here" required>
                 <br>
 
-                <!--TECH STACK CHECKBOX-->
+                <!-- Tech Stack Checkbox -->
                 <p>Tech stack</p>
                 <input type="checkbox" id="python" name="tech" value="python">
                 <label for="python">Python</label>
@@ -74,30 +138,33 @@
                 <label for="c">C</label>
                 
                 <br><br>                
-                <!--MESSAGE-->
+                <!-- Message Box -->
                 <textarea id="message" name="message" rows="8" cols="50" maxlength="350" placeholder="Type your message here" required></textarea>
 
                 <br>
-                <!--FORM SUBMIT/RESET-->
-                <button type="reset"><img alt="reset form button" src="img/clear.svg" height="30"></button>
-                <button type="submit"><img alt="send message button" src="img/send.jpg" height="30"></button>
+                <!-- Form Submit/Reset -->
+                <button type="reset"><img alt="reset form" src="img/clear_button.svg" height="30"></button>
+                <button type="submit"><img alt="send message" src="img/send_button.jpg" height="30"></button>
             </form>
         </section>
+    </main>
+    
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; <span class="footer-year">2026</span>Developed by PJ.
         
-        <br>
+        <!-- LinkedIn Profile -->
+        <a href = "https://www.linkedin.com/in/pauline-j-127b60350" target = "_blank">
+            <img alt = "link to LinkedIn" height = "15" src = "img/linkedin_button.png">
+        </a>
 
-        <footer>
-            &copy; 2026 Developed by Kit.
-            
-            <a href = "https://www.linkedin.com/in/pauline-j-127b60350" target = "_blank">
-                <img alt = "link to LinkedIn" height = "15" src = "img/linkedin.png">
-            </a>
+        <!-- Email -->
+        <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=25etcs0002214@msruas.ac.in" target = "_blank" rel = "noopener noreferrer">
+            <img alt = "link to Email" src = "img/email_button.jpg" height = "15">
+        </a>
 
-            <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=25etcs0002214@msruas.ac.in" target = "_blank" rel = "noopener noreferrer">
-                <img alt = "link to Email" src = "img/email.jpg" height = "15">
-            </a>
+    </footer>
 
-        </footer>
-
-    </body>
+</body>
 </html>
