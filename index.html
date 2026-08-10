@@ -5,7 +5,7 @@
     <!-- META TAGS -->
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Kit</title>
+    <title>Portfolio | PJ</title>
     <!-- SEO Meta Tags -->
     <meta name="description" content="Frontend  web dev. Open to collaborations">
     <meta name="keywords" content="pauline, portfolio, frontend, html, css, javascript, freelance developer">
@@ -40,23 +40,27 @@
             </ul>
             <!-- FOR DARK MODE -->
             <button 
-            class="theme-toggle" 
-            aria-label="Toggle theme" 
-            title="Toggle Theme">
+                class="theme-toggle" 
+                aria-label="Toggle theme" 
+                title="Toggle Theme">
             </button>
             <!--Mobile Menu -->
                 <button
                     class="menu-toggle"
+                    title="Navigation bar"
                     aria-label="Navigate"
                     aria-expanded="False">
+                    <img src="">
                 </button>
         </nav>
     </header>
+   
+    <!-- MAIN CONTENT -->
     <main>
 
         <!-- HERO SECTION -->
          <section class="hero-section">
-            <h1>I am <span class=highlight>Pauline Joseph</span></h1>
+            <h1><span class=highlight>Pauline Joseph</span></h1>
             <p class="tagline">WebDev | Tech Enthusiast</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View my projects</a>
@@ -98,23 +102,21 @@
                 <button class="filter-btn active" data-filter="design">Design</button>
             </div>
 
-                <h3>Project 1</h3>
-                <p>A simple portfolio webpage using HTML, CSS and Javscript</p>
-                <a href="project1.html" class="button">View project</a><br>
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube-nocookie.com/embed/AtuzapfqF1M" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
+            <div class="projects-grid">
+                <article class="project-card" data-category="web">
+                    <img src="project1.jpg" alt="">
+                    <div class="project-card-body">
+                        <h3>Project 1</h3>
+                        <p>A simple portfolio webpage using HTML, CSS and Javscript</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <a href="#" class="btn">View on GitHub</a>
+                    </div>
+                </article>
             </div>
         </section>
-
-        <br>
 
         <!-- CONTACT SECTION -->
         <section id = "contact">
@@ -126,18 +128,6 @@
                 <input type="text" id="name" name="name" placeholder="Enter your name here" required>
                 <br>
 
-                <!-- Tech Stack Checkbox -->
-                <p>Tech stack</p>
-                <input type="checkbox" id="python" name="tech" value="python">
-                <label for="python">Python</label>
-                <input type="checkbox" id="fwebdev" name="tech" value="fwebdev">
-                <label for="fwebdev">Frontend-WebDev</label>
-                <input type="checkbox" id="bwebdev" name="tech" value="bwebdev">
-                <label for="bwebdev">Backend-WebDev</label>
-                <input type="checkbox" id="c" name="tech" value="c">
-                <label for="c">C</label>
-                
-                <br><br>                
                 <!-- Message Box -->
                 <textarea id="message" name="message" rows="8" cols="50" maxlength="350" placeholder="Type your message here" required></textarea>
 
@@ -152,7 +142,7 @@
 
     <!-- FOOTER -->
     <footer>
-        &copy; <span class="footer-year">2026</span>Developed by PJ.
+        &copy; <span class="footer-year">2026</span>PJ. Developed using HTML, CSS & JavaScript.
         
         <!-- LinkedIn Profile -->
         <a href = "https://www.linkedin.com/in/pauline-j-127b60350" target = "_blank">
