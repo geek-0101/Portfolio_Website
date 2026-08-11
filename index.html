@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="img/preview.jpg">
     <!-- Links -->
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="styles.css">
+    <!--<link rel="stylesheet" href="styles.css">-->
 </head>
 
 
@@ -43,6 +43,7 @@
                 class="theme-toggle" 
                 aria-label="Toggle theme" 
                 title="Toggle Theme">
+                <img src="img/toggle_mode_button.png" height="50">
             </button>
             <!--Mobile Menu -->
                 <button
@@ -50,7 +51,7 @@
                     title="Navigation bar"
                     aria-label="Navigate"
                     aria-expanded="False">
-                    <img src="">
+                    <img src="img/menu_burger_button.png">
                 </button>
         </nav>
     </header>
@@ -119,30 +120,50 @@
         </section>
 
         <!-- CONTACT SECTION -->
-        <section id = "contact">
+<!--
+        <section id = "contact" class="contact-section">
             <h2>Drop a message | Collab</h2>
-            <form action="/submit" method="POST">
+            <form id="contact-form" action="#" method="POST" nonvalidate>
                 
-                <!-- Name Field -->
+                
                 <label for="name">Enter name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name here" required>
                 <br>
 
-                <!-- Message Box -->
+               
                 <textarea id="message" name="message" rows="8" cols="50" maxlength="350" placeholder="Type your message here" required></textarea>
 
                 <br>
-                <!-- Form Submit/Reset -->
+                
                 <button type="reset"><img alt="reset form" src="img/clear_button.svg" height="30"></button>
                 <button type="submit"><img alt="send message" src="img/send_button.jpg" height="30"></button>
+            </form>
+        </section>
+-->
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <form id="contact-form" action="#" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </section>
     </main>
     
 
     <!-- FOOTER -->
-    <footer>
-        &copy; <span class="footer-year">2026</span>PJ. Developed using HTML, CSS & JavaScript.
+    <footer class="site-footer">
+        &copy; <span class="footer-year">2026</span> PJ. Developed using HTML, CSS & JavaScript.
         
         <!-- LinkedIn Profile -->
         <a href = "https://www.linkedin.com/in/pauline-j-127b60350" target = "_blank">
