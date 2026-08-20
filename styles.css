@@ -1,4 +1,4 @@
-/* styles.css - Start styling your potfolio website here */
+/* styles.css - Styling potfolio website  */
 /* === RESET & BASE === */
 *{
     margin: 0;
@@ -7,10 +7,10 @@
 }
 /* CSS Custom Properties (variables) - DRY Principle */
 :root {
-    --primary: #000000;
-    --accent: #F18F01;
-    --text: #2C3E50;
-    --light: #F4F6F8;
+    --primary: #131731;
+    --accent: #e64d01;
+    --text: #131731;
+    --light: #ced0dd;
     --white: #FFFFFF;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
@@ -312,7 +312,7 @@ figcaption{
         top:70px;
         left:0;
         width:100%;
-        background:#1B4F72;
+        background:#131731;
         flex-direction:column;
         text-align:center;
         padding:20px 0;

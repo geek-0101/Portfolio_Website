@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .highlight{
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>A Web Page</h1>
+
+    <button id="list-manipulation">Manipulate List</button>
+    <button id="traverse-highlight">Traverse and Highlight</button>
+
+    <ul id="task-list">
+        <li class="task-item">
+            <span>Task 1: Do Homework</span>
+            <button class="delete-btn">Delete</button>
+        </li>
+        <li class="task-item">
+            <span>Task 2: Go Sleep</span>
+            <button class="delete-btn">Delete</button>
+        </li>
+    </ul>
+
+
+    <!--JS-->
+    <script>
+        document.getElementById('list-manipulation').addEventListener('click', () =>{
+            const taskList = document.getElementById('task-list');
+            const taskCount = taskList.children.length + 1;
+
+            //To add elements
+            const newLI = document.createElement('li');
+            newLI.classList.add('task-item');
+
+            const newSpan = document.createElement('span');
+            newSpan.textContent = `Task ${taskCount}: New Task Added `;
+
+            const newBtn = document.createElement('button');
+            newBtn.textContent = 'Delete';
+            newBtn.classList.add('delete-btn');
+
+            newLI.appendChild(newSpan); newLI.appendChild(newBtn);
+            taskList.appendChild(newLI);
+
+            
+        });
+
+        document.getElementById('traverse-highlight').addEventListener('click', () =>{
+            const taskList = document.getElementById('task-list');
+            const firstItem = taskList.firstElementChild;
+            
+            if(firstItem && firstItem.nextElementSibling){
+                const secondItem = firstItem.nextElementSibling;
+                secondItem.classList.add('highlight');
+            } else {
+                alert('Not enough siblings to traverse the list');
+            }
+        });
+
+        document.getElementById('task-list').addEventListener('click', (event) => {
+            if (event.target.classList.contains('delete-btn')){
+                event.target.parentElement.remove();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
